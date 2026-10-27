@@ -1,0 +1,120 @@
+@import "tailwindcss";
+
+:root {
+  --forest: #1F5130;
+  --forest-dark: #143720;
+  --forest-light: #2d6e43;
+  --leaf: #4CAF50;
+  --leaf-light: #e8f5e9;
+  --amber: #F5A623;
+  --amber-light: #fff3e0;
+  --amber-dark: #d88909;
+  --soil: #5D4037;
+  --wheat: #FFF8E7;
+  --wheat-card: #FFFFFF;
+  --teal: #26A69A;
+  --teal-light: #e0f2f1;
+  --tomato: #D84A3A;
+  --tomato-light: #ffebee;
+  --charcoal: #1E1E1E;
+  --muted: #666666;
+  --border: #E5E7EB;
+
+  --font-poppins: 'Poppins', sans-serif;
+  --font-inter: 'Inter', sans-serif;
+}
+
+@theme {
+  --color-forest: var(--forest);
+  --color-forest-dark: var(--forest-dark);
+  --color-forest-light: var(--forest-light);
+  --color-leaf: var(--leaf);
+  --color-leaf-light: var(--leaf-light);
+  --color-amber: var(--amber);
+  --color-amber-light: var(--amber-light);
+  --color-amber-dark: var(--amber-dark);
+  --color-soil: var(--soil);
+  --color-wheat: var(--wheat);
+  --color-wheat-card: var(--wheat-card);
+  --color-teal: var(--teal);
+  --color-teal-light: var(--teal-light);
+  --color-tomato: var(--tomato);
+  --color-tomato-light: var(--tomato-light);
+  --color-charcoal: var(--charcoal);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+}
+
+body {
+  background-color: var(--wheat);
+  color: var(--charcoal);
+  font-family: var(--font-inter);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-poppins);
+  font-weight: 600;
+  letter-spacing: -0.015em;
+}
+
+/* Tabular numerals for prices & timers */
+.price-tag, .num-tabular {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum";
+}
+
+/* Touch targets for farmers */
+.touch-target {
+  min-height: 48px;
+  min-width: 48px;
+}
+
+/* Custom subtle patterns */
+.bg-agro-pattern {
+  background-color: #FFF8E7;
+  background-image: radial-gradient(#1F5130 0.75px, transparent 0.75px), radial-gradient(#4CAF50 0.75px, #FFF8E7 0.75px);
+  background-size: 30px 30px;
+  background-position: 0 0, 15px 15px;
+  background-opacity: 0.05;
+}
+
+/* Card styling with 16px border-radius */
+.agro-card {
+  background-color: #FFFFFF;
+  border-radius: 16px;
+  border: 1px solid rgba(31, 81, 48, 0.08);
+  box-shadow: 0 4px 20px -2px rgba(31, 81, 48, 0.06), 0 2px 6px -1px rgba(0, 0, 0, 0.04);
+}
+
+.agro-card-interactive {
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.agro-card-interactive:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px -3px rgba(31, 81, 48, 0.12), 0 4px 10px -2px rgba(0, 0, 0, 0.06);
+}
+
+/* Pulsing live dot */
+@keyframes pulse-live {
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(76, 175, 80, 0.7); }
+  70% { transform: scale(1); box-shadow: 0 0 0 8px rgba(76, 175, 80, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(76, 175, 80, 0); }
+}
+
+.pulse-live-dot {
+  animation: pulse-live 2s infinite;
+}
+
+@keyframes pulse-urgent {
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(216, 74, 58, 0.7); }
+  70% { transform: scale(1); box-shadow: 0 0 0 8px rgba(216, 74, 58, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(216, 74, 58, 0); }
+}
+
+.pulse-urgent-dot {
+  animation: pulse-urgent 1.5s infinite;
+}
