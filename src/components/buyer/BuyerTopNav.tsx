@@ -74,7 +74,7 @@ export const BuyerTopNav: React.FC = () => {
             <ConnectivityChip />
             <LanguageToggle />
             <Link
-              href="/buyer/notifications"
+              href="/buyer/bids"
               className="relative p-2 rounded-lg hover:bg-gray-100 transition-colors"
             >
               <Bell className="w-5 h-5 text-gray-600" />

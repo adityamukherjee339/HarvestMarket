@@ -4,7 +4,6 @@ import React from "react";
 import { useI18n } from "@/lib/i18n";
 import { useMarketStore } from "@/lib/store";
 import { TrustScoreBadge } from "@/components/common/TrustScoreBadge";
-import { DEMO_FARMERS, DEMO_BUYERS } from "@/lib/demo-data";
 import { User, ShieldCheck, Star, Clock, Package, Ban } from "lucide-react";
 import Link from "next/link";
 

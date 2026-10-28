@@ -99,10 +99,10 @@ export default function BuyerMarketplace() {
               : `${activePools.length} सत्यापित फसल पूल बोली के लिए उपलब्ध`}
           </p>
         </div>
-        <Link href="/map" className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-[#1F5130] text-white text-sm font-semibold touch-target">
+        <span className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-[#1F5130]/50 text-white text-sm font-semibold cursor-default" title="Coming Soon">
           <MapPin className="w-4 h-4" />
           {language === "en" ? "Map View" : "मैप"}
-        </Link>
+        </span>
       </div>
 
       {/* Filters */}

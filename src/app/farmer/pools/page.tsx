@@ -48,10 +48,10 @@ export default function FarmerPoolsPage() {
         <h1 className="font-[var(--font-poppins)] text-xl font-bold text-[#1F5130]">
           {language === "en" ? "Harvest Pools" : "फसल पूल"}
         </h1>
-        <Link href="/map" className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#1F5130] text-white text-xs font-semibold touch-target">
+        <span className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#1F5130]/50 text-white text-xs font-semibold cursor-default" title="Coming Soon">
           <Eye className="w-3.5 h-3.5" />
           {language === "en" ? "Map View" : "मैप"}
-        </Link>
+        </span>
       </div>
 
       {/* My Pools */}
